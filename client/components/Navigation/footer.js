@@ -16,7 +16,7 @@ class NavFooter extends Component {
 			<Footer
 				className="footer"
 			>
-				<p>Built using Ant Design &copy;2016 </p>
+				<p>Built using Ant Design &copy; {(new Date()).getUTCFullYear()} </p>
 			</Footer>
 			);
 	}

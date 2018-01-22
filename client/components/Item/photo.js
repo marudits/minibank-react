@@ -25,7 +25,6 @@ class Photo extends Component {
 
 	
 	render(){
-		console.log('Photo: this.props: ', this.props)
 		let {post, i, comments} = this.props,
 			numLikes = post.likes,
 			numComments = comments ? comments.length : 0; 

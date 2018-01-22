@@ -20,7 +20,7 @@ class NavHeader extends Component {
 			<Header className="header">
 				<Link to="/" >
 					<div className="logo">
-						<p>AdmInv</p>
+						<p>App-Title</p>
 					</div>
 				</Link>
 				<Menu
