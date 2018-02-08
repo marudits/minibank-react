@@ -1,10 +1,10 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 //component
-import {Layout} from 'antd';
+import { Layout } from 'antd';
 
 
-const {Footer} = Layout;
+const { Footer } = Layout;
 
 class NavFooter extends Component {
 	constructor(props){

@@ -1,14 +1,15 @@
-import {createStore, combineReducers, compose, applyMiddleware} from 'redux';
+import { createStore, combineReducers, compose, applyMiddleware} from 'redux';
 import thunk from 'redux-thunk';
-import {syncHistoryWithStore} from 'react-router-redux';
-import {browserHistory} from 'react-router';
+import { syncHistoryWithStore } from 'react-router-redux';
+import { browserHistory } from 'react-router';
 
 //reducers
 import rootReducer from './reducers/index';
 
 const defaultState = {
-	posts: [],
-	comments: {}
+	bank: {},
+	review: {},
+	property: {}
 }
 
 const store = createStore(rootReducer, defaultState, compose(applyMiddleware(thunk)));
