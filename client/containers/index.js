@@ -5,7 +5,7 @@ import * as bankActions from '../actions/bankActions';
 import * as reviewActions from '../actions/reviewActions';
 import * as propertyActions from '../actions/propertyActions';
 
-import Main from './App/main';
+import Main from './app/main';
 
 function mapStateToProps(state){
 	return {
