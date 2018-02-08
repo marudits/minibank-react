@@ -1,34 +1,30 @@
 import React from 'react';
-import {render} from 'react-dom';
+import { render } from 'react-dom';
 
-import {Router, Route, IndexRoute, browserHistory} from 'react-router';
-import {Provider} from 'react-redux';
+import { Router, Route, IndexRoute, browserHistory } from 'react-router';
+import { Provider } from 'react-redux';
 
-import store, {history} from './store'
-
-//main containers
-import App from './containers/index';
-
-import postList from './containers/Content/Post/postList';
-import postDetail from './containers/Detail/postDetail';
+import store, { history } from './store'
 
 //css
 import css from './styles/style.styl';
 
+//containers
+import App from './containers/index';
+import BankList from './containers/bank/bankList';
+import ReviewList from './containers/review/reviewList';
+import PropertyList from './containers/property/propertyList';
+
 const router = (
 	<Provider store={store}>
 		<Router
-			history={history}
+			history={ history }
 		>
-			<Route path="/" component={App}>
-				<IndexRoute
-					component={postList}
-				></IndexRoute>
-				
-				<Route
-					path="/view/:postId" 
-					component={postDetail}
-				></Route>
+			<Route path="/" component={ App }>
+				<IndexRoute component={ BankList }></IndexRoute>	
+				<Route path="/bank" component={ BankList} ></Route>
+				<Route path="/review" component={ ReviewList} ></Route>
+				<Route path="/property" component={ PropertyList} ></Route>
 			</Route>
 		</Router>
 	</Provider>

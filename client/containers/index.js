@@ -1,25 +1,25 @@
-import {bindActionCreators} from 'redux';
-import {connect} from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 
-import * as commentActions from '../actions/commentActions';
-import * as loanActions from '../actions/loanActions';
-import * as postActions from '../actions/postActions';
+import * as bankActions from '../actions/bankActions';
+import * as reviewActions from '../actions/reviewActions';
+import * as propertyActions from '../actions/propertyActions';
 
 import Main from './App/main';
 
 function mapStateToProps(state){
-	return{
-		posts: state.posts,
-		comments: state.comments,
-		loans: state.loans
+	return {
+		banks: state.banks,
+		reviews: state.reviews,
+		properties: state.properties
 	}
 }
 
 function mapDispatchToProps(dispatch){
 	return {
-		commentActions: bindActionCreators(commentActions, dispatch),
-		loanActions: bindActionCreators(loanActions, dispatch),
-		postActions: bindActionCreators(postActions, dispatch)
+		bankActions: bindActionCreators(bankActions, dispatch),
+		reviewActions: bindActionCreators(reviewActions, dispatch),
+		propertyActions: bindActionCreators(propertyActions, dispatch)
 	}
 }
 

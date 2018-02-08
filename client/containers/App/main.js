@@ -1,12 +1,12 @@
-import React, {Component} from 'react';
-import {Link} from 'react-router';
+import React, { Component } from 'react';
+import { Link } from 'react-router';
 
 //component
-import {Layout} from 'antd';
-import NavHeader from '../../components/Navigation/header';
-import NavFooter from '../../components/Navigation/footer';
+import { Layout } from 'antd';
+import NavHeader from '../../components/navigation/header';
+import NavFooter from '../../components/navigation/footer';
 
-const {Content} = Layout;
+const { Content } = Layout;
 
 class Main extends Component {
 	render(){

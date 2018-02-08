@@ -1,8 +1,11 @@
-import React, {Component} from 'react';
-import {Link} from 'react-router'
+import React, { Component } from 'react';
+import { Link } from 'react-router'
+
+//assets
+import { CONFIG } from "../../assets/config";
 
 //component
-import {Layout, Menu,} from 'antd';
+import { Layout, Menu } from 'antd';
 
 //style
 import './style.styl';
@@ -15,23 +18,33 @@ class NavHeader extends Component {
 		super(props);
 	}
 
+	setMenuItem(){
+		return CONFIG.MENU.map((x) => {
+			return (
+				<Menu.Item key={x.ID} className="header-menu__item">
+					<Link to={x.URL}>{x.LABEL}</Link>
+				</Menu.Item>
+				)
+		})
+	}
+
 	render(){
 		return(
 			<Header className="header">
 				<Link to="/" >
 					<div className="logo">
-						<p>App-Title</p>
+						<p></p>
 					</div>
 				</Link>
 				<Menu
 					theme="dark"
         			mode="horizontal"
-        			defaultSelectedKeys={['2']}
+        			defaultSelectedKeys={['1']}
         			className="header-menu"
 				>
-					<Menu.Item key={1} className="header-menu__item">Menu 1</Menu.Item>
-					<Menu.Item key={2} className="header-menu__item">Menu 2</Menu.Item>
-					<Menu.Item key={3} className="header-menu__item">Menu 3</Menu.Item>
+					{
+						this.setMenuItem()
+					}
 				</Menu>
 			</Header>
 			);
