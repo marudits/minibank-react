@@ -32,5 +32,11 @@ module.exports = {
       loader: 'style-loader!css-loader!stylus-loader'
     }
     ]
+  },
+  node: {
+    console: true,
+    fs: 'empty',
+    net: 'empty',
+    tls: 'empty'
   }
 };

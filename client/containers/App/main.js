@@ -11,15 +11,15 @@ const { Content } = Layout;
 class Main extends Component {
 	render(){
 		return(
-			<div>
+			<Layout className="layout">
 				<NavHeader />
-				<Content>
+				<Content style={{ padding: '0 50px' }}>
 					{
 						React.cloneElement(this.props.children, this.props)
 					}
 				</Content>
 				<NavFooter />
-			</div>
+			</Layout>
 			);
 	}
 }

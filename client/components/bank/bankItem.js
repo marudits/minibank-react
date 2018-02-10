@@ -72,7 +72,7 @@ class BankItem extends Component {
 
 	render(){
 		return(
-			<Col lg={{span: 6}} md={{span: 12}} s={{span: 12}} className="bank-item">
+			<Col lg={{span: 6}} md={{span: 12}} s={{span: 12}} xs={{span: 24}} className="bank-item">
 				<Spin 
 					spinning={this.state.isLoading}
 					tip="Loading..."

@@ -6,12 +6,10 @@ import { CONFIG } from "../../assets/config";
 
 //component
 import { Layout, Menu } from 'antd';
+const { Header } = Layout;
 
 //style
 import './style.styl';
-
-
-const {Header} = Layout;
 
 class NavHeader extends Component {
 	constructor(props){
