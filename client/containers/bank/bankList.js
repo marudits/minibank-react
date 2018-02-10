@@ -45,7 +45,7 @@ class BankList extends Component {
 				<header>
 					<h3>Bank List</h3>
 				</header>
-				<content>
+				<content style={{padding: "0px 10px"}}>
 					<Row>
 					{
 						(() => {

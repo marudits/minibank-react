@@ -1,19 +1,64 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+
+//actions
+import * as propertyActions from "../../actions/propertyActions"
+
+//components
+import PropertyItem from "../../components/property/propertyItem"
+
+//library
+import { Row } from 'antd';
 
 class PropertyList extends Component {
+	constructor(props){
+		super(props);
+
+		this.state =  {
+			html: null
+		}
+
+		this.data = null		
+	}
+
+	componentWillMount(){
+		this.setPropertyList();
+		this.data = this.props.property.list;
+	}
+
+	componentWillReceiveProps(nextProps){
+		if(nextProps.property.list && this.data !== nextProps.property.list){
+			this.data = nextProps.property.list;
+		}
+	}
+
+	setPropertyList(){
+		this.props.propertyActions.setPropertyList()
+	}
+
 	render(){
 		return(
 			<div className={"property-list"}>
 				<header>
 					<h3>Property List</h3>
 				</header>
+				
 				<content>
-					<ul>
-						<li>Property A</li>
-						<li>Property B</li>
-						<li>Property C</li>
-					</ul>
+					<Row gutter={16}>
+						{
+							(() => {
+								if(this.data && this.data.length > 0){
+									return this.data.map((property, i) => {
+										return <PropertyItem key={i} index={`property-${i}`} data={property} propertyActions={this.props.propertyActions}/>
+									})
+								} else {
+									return "Loading..."
+								}
+							})()
+						}
+					</Row>
 				</content>
 				<footer></footer>
 			</div>
@@ -21,4 +66,16 @@ class PropertyList extends Component {
 	}
 }
 
-export default PropertyList;
+function mapStateToProps (state) {
+    return {
+    	property: state.property
+    }
+}
+
+function mapDispatchToProps(dispatch) {
+    return {
+        propertyActions : bindActionCreators(propertyActions, dispatch),
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(PropertyList);

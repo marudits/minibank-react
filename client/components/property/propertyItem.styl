@@ -1,0 +1,83 @@
+.property {
+  &-item {
+    
+    padding: 6px;
+
+    section {
+      padding: 6px;
+      border: 1px solid #fff;
+      background-color: #fff;
+      border-radius: 4px;
+
+      &:hover {
+        border-color: #1890ff;
+      }
+    }
+
+    &__img {
+      div {
+        height: 100%;
+        width: 100%;
+
+        img {
+          width: 300px;
+          height: 200px;
+        }
+      }
+    }
+
+    &__info {
+      header {
+        h4 {
+          text-transform: capitalize;
+          width: 280px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        p {
+          font-size: 0.8em;
+        }
+
+        span {
+          position: absolute;
+          top: -10px;
+          right: 15px;
+          font-size: 1.3em;
+          background-color: #f96d01;
+          color: #fff;
+          border-bottom-right-radius: 9px;
+          border-bottom-left-radius: 9px;
+          padding-bottom: 12px;
+          padding-top: 12px;
+          width: 60px;
+          text-align: center;
+        }
+      }
+
+      content {
+        summary {
+          height: 110px;
+          margin-bottom: 0;
+          font-size: 0.9em;
+          position: absolute;
+          top: 60px;
+          bottom: 40px;
+          overflow: hidden;
+          text-align: justify;
+          padding-right: 15px;
+          text-indent: 2em;
+        }
+
+        a {
+          font-size: 0.9em;
+          text-decoration: underline;
+          position: absolute;
+          top: 170px;
+          right: 15px;
+        }
+      }
+    }
+  }
+}
