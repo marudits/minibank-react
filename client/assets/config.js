@@ -1,6 +1,13 @@
 export const CONFIG = {
 	URL: {
 		API: "https://mini-bank-api.herokuapp.com/api/",
+		SCRAPPING: [
+			{
+				KEY: "holidayHouses",
+				URL: "https://www.holidayhouses.co.nz/Browse/List.aspx?locationsearch=&availablefrom=Any&availableto=Any&minguests=",
+				MAIN_URL: "https://www.holidayhouses.co.nz"	
+			}
+		]
 	},
 	MODELS: {
 		BANK: 'Banks'

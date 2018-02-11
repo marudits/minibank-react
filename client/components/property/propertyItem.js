@@ -57,13 +57,21 @@ class PropertyItem extends Component {
 													<summary>
 														{this.data.summary}
 													</summary>
-													<a href="#">More details</a>
 												</content>
+												<footer>
+													<i className="icon icon-guests">
+														<span>{this.data.guests || '-'}</span>
+													</i>
+													<i className="icon icon-bedrooms">
+														<span>{this.data.bedrooms || '-'}</span>
+													</i>
+													<i className="icon icon-bathrooms">
+														<span>{this.data.bathrooms || '-'}</span>
+													</i>
+													<a href={this.data.detailUrl} target="_blank">More details</a>
+												</footer>
 											</Col>
 										</Row>
-										<footer>
-											
-										</footer>
 									</section>		
 									);
 							} else {

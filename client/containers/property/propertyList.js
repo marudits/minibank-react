@@ -49,12 +49,22 @@ class PropertyList extends Component {
 					<Row gutter={16}>
 						{
 							(() => {
-								if(this.data && this.data.length > 0){
-									return this.data.map((property, i) => {
-										return <PropertyItem key={i} index={`property-${i}`} data={property} propertyActions={this.props.propertyActions}/>
-									})
-								} else {
-									return "Loading..."
+								switch(this.props.property.state){
+									case 'LOADING':
+										return `Loading...`;
+									case 'LOADED':
+										if(this.data && this.data.length > 0){
+											return this.data.map((property, i) => {
+												return <PropertyItem key={i} index={`property-${i}`} data={property} propertyActions={this.props.propertyActions}/>
+											})
+										} else {
+											return `There is no data`
+										}
+										
+									case 'ERROR':
+										return `${this.props.property.message}`
+									default:
+										return null
 								}
 							})()
 						}
