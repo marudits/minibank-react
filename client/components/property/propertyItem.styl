@@ -69,13 +69,67 @@
           padding-right: 15px;
           text-indent: 2em;
         }
+      }
+
+      footer {
+        position: absolute;
+        top: 170px;
+        width: 94%;
+        padding: 4px;
+        background-color: #f0f0f0;
+
+
+        i {
+          &.icon {
+            position: relative;
+            margin-right: 30px;
+            display: inline-block;
+            vertical-align: middle;
+            height: 16px;
+
+            &-guests {
+              width: 19px;
+              background: url(https://www.holidayhouses.co.nz/Images/Icons-sa88c611d11.png) 0 -1717px no-repeat;
+
+              span {
+                left: 24px;
+              }
+
+            }
+
+            &-bedrooms {
+              width: 23px;
+              background: url(https://www.holidayhouses.co.nz/Images/Icons-sa88c611d11.png) 0 -1637px no-repeat;
+
+              span {
+                left: 27px;
+              }
+            }
+
+            &-bathrooms {
+              width: 19px;
+              background: url(https://www.holidayhouses.co.nz/Images/Icons-sa88c611d11.png) 0 -1556px no-repeat;
+
+              span {
+                left: 22px;
+              }
+
+            }
+          }
+
+          span {
+            font-style: normal;
+            color: #747670;
+            position: absolute;
+            top: -3px;
+          }
+        }
 
         a {
           font-size: 0.9em;
           text-decoration: underline;
+          right: 10px;
           position: absolute;
-          top: 170px;
-          right: 15px;
         }
       }
     }

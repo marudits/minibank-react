@@ -8,6 +8,14 @@ function property(state = defaultState, action){
 		case 'PROPERTY_SET_LIST':
 			newState.list = data
 			return newState;
+		case 'PROPERTY_SET_STATE':
+			newState.state = data;
+			if(data === 'ERROR'){
+				newState.message = action.message;
+			} else {
+				newState.message = null;
+			}
+			return newState;
 		default:
 			return newState
 	}

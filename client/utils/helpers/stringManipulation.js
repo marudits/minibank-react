@@ -1,5 +1,8 @@
 import moment from 'moment';
 
+//assets
+import { CONFIG } from '../../assets/config';
+
 export function numToDays(num = []){
 	const DAY_OF_WEEK = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 	let days = [];
@@ -17,4 +20,8 @@ export function truncateString(text, length){
 	});
 
 	return `${truncated.join(" ")}...`
+}
+
+export function getScrappingConfig(key){
+	return CONFIG.URL.SCRAPPING.find(x => x.KEY == key)
 }
