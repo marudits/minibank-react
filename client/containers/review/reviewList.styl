@@ -1,0 +1,67 @@
+.review {
+  &-list {
+
+    &__item {
+
+      .item {
+        &-avatar {
+
+        }
+
+        &-text {
+          text-align: justify;
+          text-indent: 2em;
+        }
+
+        &-timestamp {
+          font-size: 0.8em;
+        }
+      }
+    }
+  }
+
+  &-form {
+    header {
+      margin-bottom: 18px;
+
+      h4 {
+        span {
+          font-style: italic;
+          font-weight: normal;
+          font-size: 0.9em;
+        }
+      }
+    }
+
+    content {
+      span {
+        margin-bottom: 12px;
+      }
+
+      textarea {
+        margin-bottom: 12px;
+        border-bottom: 1px solid #f0f0f0;
+      }
+
+      .error-message {
+        margin-bottom: 18px;
+        font-size: 0.9em;
+        color: red;
+      } 
+
+    }
+
+    footer {
+      .btn {
+
+        &-submit {
+          float: right;
+        }
+
+        &-reset {
+          float: left;
+        }
+      }
+    }
+  }
+}

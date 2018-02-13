@@ -37,5 +37,22 @@ export const CONFIG = {
 			LABEL: "Property",
 			URL: "/property"
 		},
-	]
+	],
+	LIBRARY: {
+		FIREBASE: {
+			CONFIG: {
+			    apiKey: "AIzaSyAWRpjEsgxOH6MVqnEjD5sNml5b7DwHgR8",
+			    authDomain: "mini-bank-admin-1509072245068.firebaseapp.com",
+			    databaseURL: "https://mini-bank-admin-1509072245068.firebaseio.com",
+			    projectId: "mini-bank-admin-1509072245068",
+			    storageBucket: "",
+			    messagingSenderId: "610336706991"
+		 	}
+		}
+	},
+	VALIDATION: {
+		REVIEW: {
+			MIN_LENGTH: 200
+		}
+	}
 }

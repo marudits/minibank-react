@@ -5,8 +5,11 @@ function review(state = defaultState, action){
 		data = action.data;
 
 	switch(action.type){
-		case 'GET_LIST_REVIEW':
-			newState = data
+		case 'REVIEW_SET_LIST':
+			newState.list = data
+			return newState;
+		case 'REVIEW_SET_ISTYPING':
+			newState.isTyping = data;
 			return newState;
 		default:
 			return newState
